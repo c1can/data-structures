@@ -37,6 +37,40 @@ const Stack = function() {
     }
 }
 //queues
+
+    //print
+    //queue
+    //dequeue
+    //front
+    //size
+    //isEmpty
+
+
+const Queue = function() {
+    this.collection = []
+
+
+    this.print = function() {
+        return this.collection
+    }
+    this.queue = function(value) {
+        this.collection.push(value)
+    }
+    this.dequeue = function() {
+        this.collection.shift()
+    }
+    this.front = function() {
+       return this.collection.length > 0
+        ? this.collection[0]
+        : undefined
+    }
+    this.size = function() {
+        return this.collection.length
+    }
+    this.isEmpty = function() {
+        return (this.collection.length !== 0)
+    }
+}
 //hash tables
 //sets
 const Set = function() {
