@@ -7,6 +7,29 @@ const obj = {
   city: 'New York'
 };
 //linked lists
+//binary search tress
+class Node {
+    constructor(data = null, left = null, right = null) {
+        this.data = data
+        this.left = left
+        this.right = right
+    }
+}
+
+class BST {
+    constructor() {
+        this.root = null
+    }
+    add(data) {
+        
+        if(this.root == null) {
+            this.root = new Node(data)
+            return
+        }else {
+            //pending
+        }
+    }
+}
 //stacks
 const Stack = function() {
     this.count = 0;
@@ -38,17 +61,8 @@ const Stack = function() {
 }
 //queues
 
-    //print
-    //queue
-    //dequeue
-    //front
-    //size
-    //isEmpty
-
-
 const Queue = function() {
     this.collection = []
-
 
     this.print = function() {
         return this.collection
