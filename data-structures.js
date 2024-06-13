@@ -21,14 +21,24 @@ class BST {
         this.root = null
     }
     add(data) {
-        
-        if(this.root == null) {
+     const node = this.root
+        if(node === null) {
             this.root = new Node(data)
             return
-        }else {
-            //pending
         }
-    }
+        const searchTree = function(node) {
+            if(data < node.data && node.left === null) {
+                node.left = new Node(data)
+            }else if(data < node.data && node.left !== null){
+                return searchTree(node.left)
+            }else if(data > node.data && node.right === null) {
+                node.right = new Node(data)
+                return
+            }else if(data > node.data && node.right !== null) {
+                return searchTree(node.right)
+            }
+        }
+   }
 }
 //stacks
 const Stack = function() {
